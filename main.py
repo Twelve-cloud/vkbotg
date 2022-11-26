@@ -59,7 +59,7 @@ if __name__ == '__main__':
     method = vk_api.VkApiMethod(session)
 
     threads = [
-        Process(target=remove_requests, args=((i + 1) * 20,))
+        Process(target=remove_requests, args=(i * 20,))
         for i in range(4)
     ]
 
